@@ -16,7 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: index.php");
 }
 ?>
-
 <form method="POST">
     Nome: <input type="text" name="nome" value="<?= $dado['nome'] ?>"><br>
     Email: <input type="email" name="email" value="<?= $dado['email'] ?>"><br>
