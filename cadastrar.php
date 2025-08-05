@@ -9,12 +9,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO usuarios (nome, email) VALUES ('$nome', '$email')";
     $res = mysqli_query($conn, $sql);
     if ($res) {
-        echo "Usuário cadastrado com sucesso!";
+        echo "<script>alert('Usuário cadastrado com sucesso!'); window.location.href='index.php';</script>";
+        exit;
     } else {
         echo "Erro ao cadastrar!";
     }
 }
-
 ?>
 
 <form method="POST">

@@ -12,9 +12,10 @@ while ($linha = mysqli_fetch_array($resultado)) {
     echo "Nome: " . htmlspecialchars($linha['nome']) . "<br>";
     echo "Email: " . htmlspecialchars($linha['email']) . "<br><br>";
     echo "<a href='editar.php?id=" . $id . "'>Editar</a> | ";
-    echo "<a href='excluir.php?id=" . $id . "'>Excluir</a> |";
-    echo "<a href='cadastrar.php?id=" . $id ."'>Cadastrar novo usuário </a> <br><br>";
+    echo "<a href='excluir.php?id=" . $id . "'>Excluir</a><br><br>";
 }
+
+echo "<a href='cadastrar.php'>Cadastrar novo usuário</a><br><br>";
 ?>
 <?php
 if (isset($_GET['msg'])) {
